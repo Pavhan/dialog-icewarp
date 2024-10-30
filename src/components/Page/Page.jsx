@@ -58,9 +58,5 @@ export const Page = () => {
         { text: "More info", },
         { text: "Cancel", variant: "danger" },
       ]} />
-
-      <ul className="border-t border-gray-300 text-gray-500 text-sm mt-8 pt-8 space-y-3">
-        <li><strong>*</strong> Group of buttons will be wrapped to a new line and aligned to the right when doesn’t fit on the same line with text.</li>
-      </ul>
   </div>
 };
