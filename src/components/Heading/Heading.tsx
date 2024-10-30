@@ -9,9 +9,9 @@ interface HeadingProps {
 
 export const Heading = ({ icon, text, className}: HeadingProps) => {
   return (
-    <div className='flex gap-1 items-center'>
+    <div className='flex gap-2 items-center grow'>
       <Icon element={icon} />
-      <h2 className={clsx('text-violet-600 font-bold text-lg', className)}>
+      <h2 title={text} className={clsx('text-violet-600 font-bold text-lg leading-tight text-pretty grow', className)}>
         {text}
       </h2>
     </div>

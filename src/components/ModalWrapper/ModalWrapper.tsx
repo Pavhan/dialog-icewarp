@@ -37,7 +37,7 @@ export const ModalWrapper = ({description, title, icon, headerButtons, content, 
         </ModalHeader>
         <ModalContent content={content} />
         <ModalFooter text={footerText}>
-          <GroupButtons buttons={footerButtons} expadableButtonWidth={true} />
+          <GroupButtons buttons={footerButtons?.map((button)=> ({...button, onClick: button.variant === 'danger' ? () => setModal(false) : undefined}))} />
         </ModalFooter>
       </Modal>
     </>
