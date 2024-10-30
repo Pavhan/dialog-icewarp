@@ -15,9 +15,10 @@ interface ModalWrapperProps {
   content: string[];
   footerText?: string;
   footerButtons?: ButtonProps[];
+  showCloseButton?: boolean;
 }
 
-export const ModalWrapper = ({description, title, icon, headerButtons, content, footerText, footerButtons}: ModalWrapperProps) => {
+export const ModalWrapper = ({description, title, icon, headerButtons, content, footerText, footerButtons, showCloseButton}: ModalWrapperProps) => {
   const [modal, setModal] = React.useState(false);
 
   return (
@@ -29,15 +30,16 @@ export const ModalWrapper = ({description, title, icon, headerButtons, content, 
 
       <Modal
         openModal={modal}
+        showCloseButton={showCloseButton}
         closeModal={() => setModal(false)}
       >
-        <ModalHeader>
+        <ModalHeader className={showCloseButton ? "pr-10" : "pr-4"}>
           <Heading icon={icon} text={title} />
           <GroupButtons buttons={headerButtons}/>
         </ModalHeader>
         <ModalContent content={content} />
         <ModalFooter text={footerText}>
-          <GroupButtons buttons={footerButtons?.map((button)=> ({...button, onClick: button.variant === 'danger' ? () => setModal(false) : undefined}))} />
+          <GroupButtons buttons={footerButtons?.map((button)=> ({...button, onClick: button.variant === "danger" ? () => setModal(false) : undefined}))} />
         </ModalFooter>
       </Modal>
     </>

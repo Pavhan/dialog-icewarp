@@ -11,6 +11,7 @@ export const Page = () => {
       icon={<FaceSmileIcon />} 
       title="Congratulations!"
       content={["Your list is saved automatically."]}
+      showCloseButton={true}
       />
 
     <ModalWrapper
