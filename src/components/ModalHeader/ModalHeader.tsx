@@ -6,7 +6,7 @@ interface ModalHeaderProps {
 
 export const ModalHeader = ({ children }: ModalHeaderProps) => {
   return (
-    <div className="py-4 pl-4 pr-7 flex gap-2 items-center justify-between flex-wrap border-b border-gray-200">
+    <div className="py-4 pl-4 pr-7 flex gap-5 items-center justify-between flex-wrap border-b border-gray-200">
       {children}
     </div>
   );

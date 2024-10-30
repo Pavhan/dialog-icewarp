@@ -4,7 +4,7 @@ import { Icon } from '../Icon/Icon';
 interface HeadingProps {
   icon: JSX.Element;
   text: string;
-  className: string;
+  className?: string;
 }
 
 export const Heading = ({ icon, text, className}: HeadingProps) => {
