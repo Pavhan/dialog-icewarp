@@ -7,14 +7,14 @@ export const Page = () => {
   return <div className="max-w-4xl mx-auto p-6">
     <h1 className="font-bold text-xl mb-4">Dialog window alternatives</h1>
     <ModalWrapper
-      description="none buttons in header + none buttons in footer + no footer text"
+      description="no buttons in header + no buttons in footer + no footer text"
       icon={<FaceSmileIcon />} 
       title="Congratulations!"
       content={["Your list is saved automatically.", "This window will be close in <strong>5 seconds</strong> automatically."]}
       />
 
     <ModalWrapper
-      description="1 button in header, none buttons in footer + footer text"
+      description="1 button in header, no buttons in footer + footer text"
       icon={<FaceSmileIcon />} 
       title="Congratulations!"
       content={["Your list is saved automatically.", "This window will be close in <strong>5 seconds</strong> automatically."]}
@@ -55,9 +55,9 @@ export const Page = () => {
         { text: "Cancel" },
       ]} />
 
-      <ul className="border-t border-gry-200 text-sm mt-5 pt-5 space-y-3">
+      <ul className="border-t border-gray-300 text-gray-500 text-sm mt-8 pt-8 space-y-3">
         <li><strong>*</strong> Group of buttons will be wrapped to a new line and aligned to the right when doesn’t fit on the same line with text.</li>
-        <li><strong>**</strong> Footer Buttons are wide as possible</li>
+        <li><strong>**</strong> The footer buttons expand to full width if there is enough space.</li>
       </ul>
   </div>
 };

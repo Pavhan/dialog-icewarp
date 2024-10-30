@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import { Button, ButtonProps } from "../Button/Button";
 
 interface GroupButtonsProps {
@@ -7,7 +8,7 @@ interface GroupButtonsProps {
 
 export const GroupButtons = ({ expadableButtonWidth, buttons } : GroupButtonsProps) => {
   return buttons ? 
-    <div className="flex flex-nowrap gap-2 items-start sm:justify-end flex-grow">
+    <div className={clsx("flex flex-nowrap gap-2 items-start sm:justify-end", {"flex-grow": expadableButtonWidth})}>
       {buttons.map((button, index) => <Button key={index} expandableWidth={expadableButtonWidth} {...button} />)}
     </div> : null
 }
