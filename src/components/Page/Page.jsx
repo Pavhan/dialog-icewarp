@@ -14,7 +14,7 @@ export const Page = () => {
       />
 
     <ModalWrapper
-      description="2 buttons in header, none buttons in footer + footer text"
+      description="1 button in header, none buttons in footer + footer text"
       icon={<FaceSmileIcon />} 
       title="Congratulations!"
       content={["Your list is saved automatically.", "This window will be close in <strong>5 seconds</strong> automatically."]}
