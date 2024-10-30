@@ -1,7 +1,13 @@
 import React from "react";
 
-export const Modal = ({ openModal, closeModal, children }) => {
-  const ref = React.useRef();
+interface ModalProps {
+  openModal: boolean;
+  closeModal: () => void;
+  children: React.ReactNode;
+}
+
+export const Modal = ({ openModal, closeModal, children }: ModalProps) => {
+  const ref = React.useRef<HTMLDialogElement>(null);
 
   React.useEffect(() => {
     if (openModal) {

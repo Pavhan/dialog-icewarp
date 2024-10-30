@@ -1,5 +1,5 @@
 import React from "react";
-import { Modal } from "../Modal/Modal";
+import { Modal } from "../../components/Modal/Modal";
 
 export const Page = () => {
   const [modal, setModal] = React.useState(false);
@@ -11,6 +11,7 @@ export const Page = () => {
       >
         Open modal
       </button>
+      
       <Modal
         openModal={modal}
         closeModal={() => setModal(false)}
