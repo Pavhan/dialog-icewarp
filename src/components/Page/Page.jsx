@@ -1,22 +1,28 @@
 import React from "react";
-import { Modal } from "../../components/Modal/Modal";
+import { Modal } from "../Modal/Modal";
+import { Button } from "../Button/Button";
+import { ModalHeader } from "../ModalHeader/ModalHeader";
+import { ModalContent } from "../ModalContent/ModalContent";
+import { ModalFooter } from "../ModalFooter/ModalFooter";
 
 export const Page = () => {
   const [modal, setModal] = React.useState(false);
 
   return (
     <>
-      <button
+      <Button
         onClick={() => setModal(true)}
       >
         Open modal
-      </button>
+      </Button>
       
       <Modal
         openModal={modal}
         closeModal={() => setModal(false)}
       >
-        Modal content.
+        <ModalHeader></ModalHeader>
+        <ModalContent>Are you really sure you want to delete this item?</ModalContent>
+        <ModalFooter></ModalFooter>
       </Modal>
     </>
   )
